@@ -12,8 +12,8 @@ stopBtn.addEventListener("click", stopTimer);
 resetBtn.addEventListener("click", resetTimer);
 
 function startTimer() {
-  startTime = Date.now() - elapsedTime;
-  intervalId = setInterval(updateTime, 10);
+  startTime = Date.now() - elapsedTime; 
+  intervalId = setInterval(updateTime, 1000);
   startBtn.disabled = true;
   stopBtn.disabled = false;
   resetBtn.disabled = false;
@@ -21,7 +21,7 @@ function startTimer() {
 
 function stopTimer() {
   clearInterval(intervalId);
-  elapsedTime = Date.now() - startTime;
+  elapsedTime = Date.now() - startTime; 
   startBtn.disabled = false;
   stopBtn.disabled = true;
 }
